@@ -7,7 +7,7 @@ Erstellen von Klassen in C# innerhalb der OOP Laborstunden.
 
 *Für alle Daten werden Eigenschaften definiert*
 
-Wir bauen eine Klasse ,,Mensch". Dazu erstellen wir noch die folgenden Klassen: Schüler und Arbeiter. Die zwei werden noch weitere Unterklassen enthalten, folgendermaßen:
+Wir bauen eine Klasse "Einkaufsladen". Dazu erstellen wir noch die folgenden Klassen: Kleidereinkauf, Elektronik, Lebensmittel. Die zwei werden noch weitere Unterklassen enthalten, folgendermaßen:
 
 Einkaufsladen
  ├── Kleidereinkauf (Andra)
