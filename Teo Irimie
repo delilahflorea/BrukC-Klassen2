@@ -43,7 +43,7 @@ namespace KlassenGr1
         //methode
         public virtual void ZeigeKategorie()
         {
-            Console.WriteLine($"Kategorie: {Kategorie}");
+            Console.WriteLine("Kategorie: {Kategorie}");
         }
     }
 }
