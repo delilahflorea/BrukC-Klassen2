@@ -12,7 +12,7 @@ namespace KlassenGr1
         public bool Sonderangebot { get; set; }
 
         //Konstruktor 1
-        public Kleidereinkauf() : base() { }
+       // public Kleidereinkauf() : base() { }
 
         //Konstruktor 2
         public Kleidereinkauf(string nameeinkaufsladen, string platzierung, int kundenanzahltag, string kleidungstyp, bool sonderangebot)
@@ -27,9 +27,9 @@ namespace KlassenGr1
         {
             return uhrzeit >= 9 && uhrzeit < 20; // Öffnungszeiten für Kleidereinkauf
         }
-
+        //change
         // Methode 1
-        public void Angebot()
+        public virtual void Angebot()
         {
             Console.WriteLine( Nameeinkaufsladen );
             Console.WriteLine("Kleidungstyp:" + Kleidungstyp );
