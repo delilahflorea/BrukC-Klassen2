@@ -48,3 +48,14 @@ namespace KlassenGr1
     }
 }
 
+
+ Lebensmittel Kategorie = new Lebensmittel(
+                "Transagape",
+                "Sibiu",
+                "Lebensmittel",
+                34,
+                350,
+                7000,
+                "Lebensnotwendige");
+
+
