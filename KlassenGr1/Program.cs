@@ -8,7 +8,7 @@ namespace KlassenGr1
         {
 
 
-        //visual studio commit
+        //visual studio commic
         //    var produkte = new Dictionary<string, (decimal Preis, int Menge)>
         //{
         //    { "Laptop", (999.99m, 10) },
