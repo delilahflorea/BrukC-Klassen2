@@ -11,8 +11,8 @@ Wir bauen eine Klasse "Einkaufsladen". Dazu erstellen wir noch die folgenden Kla
 
 Einkaufsladen
  ├── Kleidereinkauf (Andra)
- │    ├── neue Kleider (Maria)
- │    │    ├── Brand (Matei)
+ │    ├── neue Kleider (Matei)
+ │    │    ├── Brand (Maria)
  │    │    └── Outlet (Victor)
  │    └── Second-Hand (Teo B)
  ├── Elektronik (Tudor)
