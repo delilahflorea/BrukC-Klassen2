@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace Elektronik
 {
   
-    internal class Haushalt : ElektronikAbteilung, IVerwaltbar
+    internal class Haushalt : ElektronikAbteilung
     {
         public string HaushaltTyp { get; set; }
         public int GarantieDauer { get; set; }
