@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace KlassenGr1
 {
-    internal class Suessigkeiten
-    {
+ 
         internal class Suessigkeiten : Lebensmittel
         {
             public string SuessigkeitenTyp { get; set; } 
