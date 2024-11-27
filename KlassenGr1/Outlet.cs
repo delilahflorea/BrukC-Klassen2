@@ -1,88 +1,60 @@
-﻿using KlassenGr1;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 
-namespace OutletNamespace
+namespace KlassenGr1
 {
-    internal class Outlet : Einkaufsladen
+    internal class Outlet : NeueKleider
     {
-        private string[] marken; 
-        private int[] mengen; 
-        private int markenAnzahl;
+        private int stock; 
+        private float discount; 
 
-        
         public Outlet()
+            : base("", "", 0, "", false, 0, 0)
         {
-            marken = new string[100]; 
-            mengen = new int[100];
-            markenAnzahl = 0;
+            stock = 0;
+            discount = 0;
         }
 
-        public Outlet(string nameeinkaufsladen, string platzierung, string abteilung, int nrangestellte, int kundenanzahltag, float einkommen)
-            : base(nameeinkaufsladen, platzierung, abteilung, nrangestellte, kundenanzahltag, einkommen)
+        public Outlet(string nameeinkaufsladen, string platzierung, int kundenanzahltag, string kleidungstyp, bool sonderangebot, float angebotProzent, int stock)
+            : base(nameeinkaufsladen, platzierung, kundenanzahltag, kleidungstyp, sonderangebot, angebotProzent, stock)
         {
-            marken = new string[100];
-            mengen = new int[100];
-            markenAnzahl = 0;
+            this.stock = stock;
+            this.discount = angebotProzent;
         }
 
-        public void ProduktHinzufuegen(string marke, int menge)
+        public void AddStock(int newStock)
         {
-            for (int i = 0; i < markenAnzahl; i++)
+            stock += newStock;
+            Console.WriteLine("Es wurden " + newStock + " Stücke hinzugefügt. Gesamtlagerbestand: " + stock);
+        }
+
+        public void SellStock(int soldStock)
+        {
+            if (stock >= soldStock)
             {
-                if (marken[i] == marke)
-                {
-                    mengen[i] += menge;
-                    Console.WriteLine("Menge von " + marke + " erhöht. Neue Menge: " + mengen[i]);
-                    return;
-                }
+                stock -= soldStock;
+                Console.WriteLine(soldStock + " Stücke wurden verkauft. Verbleibender Lagerbestand: " + stock);
             }
-            marken[markenAnzahl] = marke;
-            mengen[markenAnzahl] = menge;
-            markenAnzahl++;
-            Console.WriteLine("Marke " + marke + " hinzugefügt mit Menge: " + menge);
-        }
-
-        public void ProduktVerkaufen(string marke)
-        {
-            for (int i = 0; i < markenAnzahl; i++)
+            else
             {
-                if (marken[i] == marke)
-                {
-                    if (mengen[i] > 0)
-                    {
-                        mengen[i]--;
-                        Console.WriteLine("Ein Produkt von " + marke + " verkauft. Verbleibende Menge: " + mengen[i]);
-                    }
-                    else
-                    {
-                        Console.WriteLine("Marke " + marke + " ist ausverkauft.");
-                    }
-                    return;
-                }
-            }
-            Console.WriteLine("Marke " + marke + " nicht gefunden.");
-        }
-
-        public void ZeigeAlleProdukte()
-        {
-            Console.WriteLine("Verfügbare Marken im Outlet:");
-            for (int i = 0; i < markenAnzahl; i++)
-            {
-                Console.WriteLine("- " + marken[i] + ": Menge = " + mengen[i]);
+                Console.WriteLine("Nicht genügend Lagerbestand, um " + soldStock + " zu verkaufen.");
             }
         }
 
-        public override bool offengeschlossen(int uhrzeit)
+        public override void Angebot()
         {
-            if (uhrzeit >= 10 && uhrzeit <= 20)
+            Console.WriteLine(Nameeinkaufsladen + " bietet einen Rabatt von " + discount + "% auf alle Artikel an!");
+            if (Sonderangebot)
             {
-                return true;
+                Console.WriteLine("Zusätzlich gibt es Sonderangebote auf " + Kleidungstyp + ".");
             }
-            return false;
+        }
+
+        public override void buyNewStock()
+        {
+            if (stock < 15)
+            {
+                Console.WriteLine("Der Lagerbestand ist niedrig. Bitte kaufen Sie mindestens 30 weitere Stücke ein.");
+            }
         }
     }
 }
