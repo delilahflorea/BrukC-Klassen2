@@ -15,7 +15,6 @@ namespace Elektronik
         public string GeratTyp { get; set; }
         public int GarantieDauer { get; set; }
         public int SpeicherplatzGB { get; set; }
-        //  public string ... { get; set; }
 
 
 
@@ -25,7 +24,6 @@ namespace Elektronik
             GeratTyp = geratTyp;
             GarantieDauer = 36;
             SpeicherplatzGB = 256;
-            //  Hersteller = "Generischer Hersteller";
             Console.WriteLine("\nIT-Gerat-typ: " + GeratTyp);
         }
 
