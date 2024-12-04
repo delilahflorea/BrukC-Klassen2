@@ -13,8 +13,8 @@ namespace Elektronik
 
         
 
-        public Haushalt(string nameeinkaufsladen, string platzierung, string abteilung, int nrangestellte, int kundenanzahltag, float einkommen, int anzahlProdukte, string spezialisiertAuf, Dictionary<string, (decimal Preis, int Menge)> produkte, string haushaltTyp)
-            : base(nameeinkaufsladen, platzierung, abteilung, nrangestellte, kundenanzahltag, einkommen, anzahlProdukte, spezialisiertAuf, produkte)
+        public Haushalt(string nameeinkaufsladen, string platzierung, string abteilung, int nrangestellte, int kundenanzahltag, float einkommen, int anzahlProdukte, string spezialisiertAuf, string haushaltTyp)
+            : base(nameeinkaufsladen, platzierung, abteilung, nrangestellte, kundenanzahltag, einkommen, anzahlProdukte, spezialisiertAuf)
         {
             HaushaltTyp = haushaltTyp;
             GarantieDauer = 24;
