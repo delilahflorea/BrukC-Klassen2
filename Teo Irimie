@@ -57,5 +57,106 @@ namespace KlassenGr1
                 350,
                 7000,
                 "Lebensnotwendige");
+Einkaufsladen shop = new Einkaufsladen(
+            "SuperMarkt",
+            "Zentrum",
+            "Lebensmittel",
+            15,
+            200,
+            15000.50f
+                );
 
+            // Anzeigen der Eigenschaften des Ladens
+            Console.WriteLine("Name des Ladens: " + shop.Nameeinkaufsladen);
+            Console.WriteLine("Platzierung: " + shop.Platzierung);
+            Console.WriteLine("Abteilung: " + shop.Abteilung);
+            Console.WriteLine("Anzahl der Angestellten: " + shop.Nrangestellte);
+            Console.WriteLine("Kundenanzahl pro Tag: " + shop.Kundenanzahltag);
+            Console.WriteLine("Einkommen: " + shop.Einkommen + " Euro");
+
+            // Überprüfen, ob der Laden zu einer bestimmten Uhrzeit geöffnet ist
+            int uhrzeit = 10; // Beispielzeit: 10 Uhr
+            if (shop.offengeschlossen(uhrzeit))
+            {
+                Console.WriteLine("Der Laden ist geöffnet.");
+            }
+            else
+            {
+                Console.WriteLine("Der Laden ist geschlossen.");
+            }
+
+
+        }
+    
+    }
+
+
+ // Erstellen eines Objekts der Klasse Vegetarisch
+            Vegetarisch vegetarischLaden = new Vegetarisch(
+                "VeggieMarkt",
+                "Innenstadt",
+                "Vegetarische Lebensmittel",
+                10,
+                150,
+                10000.0f,
+                "Vegetarisch",
+                250
+            );
+
+            // Anzeigen der allgemeinen Informationen
+            Console.WriteLine("Name des Ladens: " + vegetarischLaden.Nameeinkaufsladen);
+            Console.WriteLine("Platzierung: " + vegetarischLaden.Platzierung);
+            Console.WriteLine("Abteilung: " + vegetarischLaden.Abteilung);
+            Console.WriteLine("Anzahl der Angestellten: " + vegetarischLaden.Nrangestellte);
+            Console.WriteLine("Kundenanzahl pro Tag: " + vegetarischLaden.Kundenanzahltag);
+            Console.WriteLine("Einkommen: " + vegetarischLaden.Einkommen + " Euro");
+
+            // Anzeigen der vegetarischen Kategorie
+            vegetarischLaden.ZeigeKategorie();
+
+            // Anzeigen der Anzahl vegetarischer Produkte
+            vegetarischLaden.ZeigeAnzahlVegetarischeProdukte();
+
+            // Prüfen, ob genügend Produkte vorhanden sind
+            int benötigteProdukte = 100;
+            if (vegetarischLaden.SindGenugProdukteVorhanden(benötigteProdukte))
+            {
+                Console.WriteLine("Es sind genügend vegetarische Produkte vorhanden.");
+            }
+            else
+            {
+                Console.WriteLine("Es sind nicht genügend vegetarische Produkte vorhanden.");
+            }
+        }
+
+
+
+Einkaufsladen shop = new Einkaufsladen(
+            "SuperMarkt",
+            "Zentrum",
+            "Lebensmittel",
+            15,
+            200,
+            15000.50f
+        );
+
+        // Anzeigen der Eigenschaften des Ladens
+        Console.WriteLine("Name des Ladens: " + shop.Nameeinkaufsladen);
+        Console.WriteLine("Platzierung: " + shop.Platzierung);
+        Console.WriteLine("Abteilung: " + shop.Abteilung);
+        Console.WriteLine("Anzahl der Angestellten: " + shop.Nrangestellte);
+        Console.WriteLine("Kundenanzahl pro Tag: " + shop.Kundenanzahltag);
+        Console.WriteLine("Einkommen: " + shop.Einkommen + " Euro");
+
+        // Überprüfen, ob der Laden zu einer bestimmten Uhrzeit geöffnet ist
+        int uhrzeit = 10; // Beispielzeit: 10 Uhr
+        if (shop.offengeschlossen(uhrzeit))
+        {
+            Console.WriteLine("Der Laden ist geöffnet.");
+        }
+        else
+        {
+            Console.WriteLine("Der Laden ist geschlossen.");
+        }
+    }
 
